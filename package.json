@@ -2,15 +2,16 @@
   "name": "elysia-htmx",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "bunx drizzle-kit push:sqlite",
+    "db:ui": "bunx drizzle-kit studio",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "@libsql/client": "^0.3.3-pre.2",
     "drizzle-orm": "^0.28.6",
     "elysia": "latest"
   },
   "devDependencies": {
+    "better-sqlite3": "^8.6.0",
     "bun-types": "latest",
     "drizzle-kit": "^0.19.13"
   },
