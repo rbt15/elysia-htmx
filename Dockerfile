@@ -25,6 +25,8 @@ COPY src src
 # COPY tsconfig.json .
 
 ENV ENV production
+LABEL fly_launch_runtime="Bun"
+
 CMD ["./bun", "src/index.ts"]
 
 EXPOSE 3000
